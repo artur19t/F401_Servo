@@ -92,6 +92,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
+  GPIO_PWM3_UsrInit();
+  PWM3_CH1_UsrInit();
 
   /* USER CODE END 2 */
 
