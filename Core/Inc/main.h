@@ -36,6 +36,7 @@ extern "C" {
 #include "stm32f4xx_ll_pwr.h"
 #include "stm32f4xx_ll_dma.h"
 #include "stm32f4xx_ll_tim.h"
+#include "stm32f4xx_ll_usart.h"
 #include "stm32f4xx_ll_gpio.h"
 
 #if defined(USE_FULL_ASSERT)
@@ -44,7 +45,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
 #include "hw_init.h"
+#include "IT_handlers.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

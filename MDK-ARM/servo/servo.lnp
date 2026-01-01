@@ -8,8 +8,10 @@
 "servo\stm32f4xx_ll_rcc.o"
 "servo\stm32f4xx_ll_utils.o"
 "servo\stm32f4xx_ll_exti.o"
+"servo\stm32f4xx_ll_usart.o"
 "servo\system_stm32f4xx.o"
 "servo\hw_init.o"
+"servo\it_handlers.o"
 --strict --scatter "servo\servo.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

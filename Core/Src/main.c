@@ -53,7 +53,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t rx_buf[RX_SIZE];
 /* USER CODE END 0 */
 
 /**
@@ -94,13 +94,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
   GPIO_PWM3_UsrInit();
   PWM3_CH1_UsrInit();
-
+  GPIO_USART2_UsrInit();
+  USART2_UsrInit();
+  DMA1_UsrInit();
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

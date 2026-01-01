@@ -1,4 +1,4 @@
-servo/hw_init.o: ..\User\Src\hw_init.c ..\User\Inc\hw_init.h \
+servo/it_handlers.o: ..\User\Src\IT_handlers.c ..\User\Inc\IT_handlers.h \
   ..\Core\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
@@ -15,4 +15,4 @@ servo/hw_init.o: ..\User\Src\hw_init.c ..\User\Inc\hw_init.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h \
-  ..\User\Inc\IT_handlers.h
+  ..\User\Inc\hw_init.h
