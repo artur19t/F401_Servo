@@ -102,7 +102,7 @@ void DMA1_UsrInit(void)
   DMA_UsrStrct.MemoryOrM2MDstAddress = (uint32_t)&rx_buf;
   DMA_UsrStrct.MemoryOrM2MDstDataSize = LL_DMA_MDATAALIGN_BYTE;
   DMA_UsrStrct.MemoryOrM2MDstIncMode = LL_DMA_MEMORY_INCREMENT;
-  DMA_UsrStrct.Mode = LL_DMA_MODE_CIRCULAR;
+  DMA_UsrStrct.Mode = LL_DMA_MODE_NORMAL;
   DMA_UsrStrct.NbData = RX_SIZE;
   DMA_UsrStrct.PeriphOrM2MSrcAddress = (uint32_t)&USART2->DR;
   DMA_UsrStrct.PeriphOrM2MSrcDataSize = LL_DMA_PDATAALIGN_BYTE;

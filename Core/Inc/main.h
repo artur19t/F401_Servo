@@ -46,6 +46,9 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+
 #include "hw_init.h"
 #include "IT_handlers.h"
 /* USER CODE END Includes */

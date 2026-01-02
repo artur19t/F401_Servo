@@ -632,6 +632,16 @@
               <FileType>5</FileType>
               <FilePath>..\User\Inc\IT_handlers.h</FilePath>
             </File>
+            <File>
+              <FileName>Connect_logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Src\Connect_logic.c</FilePath>
+            </File>
+            <File>
+              <FileName>Connect_logic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\Inc\Connect_logic.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

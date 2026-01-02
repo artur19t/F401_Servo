@@ -97,7 +97,7 @@ int main(void)
   GPIO_USART2_UsrInit();
   USART2_UsrInit();
   DMA1_UsrInit();
-  
+  // ---
   /* USER CODE END 2 */
 
   /* Infinite loop */

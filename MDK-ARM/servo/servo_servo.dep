@@ -1,8 +1,8 @@
 Dependencies for Project 'servo', Target 'servo': (DO NOT MODIFY !)
 CompilerVersion: 6240000::V6.24::ARMCLANG
 F (startup_stm32f401xc.s)(0x6956BDDF)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 543" -Wa,armasm,--pd,"STM32F401xC SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o servo/startup_stm32f401xc.o)
-F (../Core/Src/main.c)(0x6956D49A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/main.o -MMD)
-I (..\Core\Inc\main.h)(0x6956CB28)
+F (../Core/Src/main.c)(0x6956D914)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/main.o -MMD)
+I (..\Core\Inc\main.h)(0x69580627)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
@@ -19,9 +19,9 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
 I (..\User\Inc\hw_init.h)(0x6956D49A)
-I (..\User\Inc\IT_handlers.h)(0x6956CB5F)
+I (..\User\Inc\IT_handlers.h)(0x69580EFF)
 F (../Core/Src/stm32f4xx_it.c)(0x694ADB61)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/stm32f4xx_it.o -MMD)
-I (..\Core\Inc\main.h)(0x6956CB28)
+I (..\Core\Inc\main.h)(0x69580627)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
@@ -38,7 +38,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
 I (..\User\Inc\hw_init.h)(0x6956D49A)
-I (..\User\Inc\IT_handlers.h)(0x6956CB5F)
+I (..\User\Inc\IT_handlers.h)(0x69580EFF)
 I (..\Core\Inc\stm32f4xx_it.h)(0x694ADB61)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c)(0x68F5D6F3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/stm32f4xx_ll_gpio.o -MMD)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
@@ -95,9 +95,9 @@ I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Include\core_cm4.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x68F5D6F4)
-F (..\User\Src\hw_init.c)(0x6956D88D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/hw_init.o -MMD)
+F (..\User\Src\hw_init.c)(0x69580F3A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/hw_init.o -MMD)
 I (..\User\Inc\hw_init.h)(0x6956D49A)
-I (..\Core\Inc\main.h)(0x6956CB28)
+I (..\Core\Inc\main.h)(0x69580627)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
@@ -113,11 +113,11 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
-I (..\User\Inc\IT_handlers.h)(0x6956CB5F)
+I (..\User\Inc\IT_handlers.h)(0x69580EFF)
 F (..\User\Inc\hw_init.h)(0x6956D49A)()
-F (..\User\Src\IT_handlers.c)(0x6956CBAC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/it_handlers.o -MMD)
-I (..\User\Inc\IT_handlers.h)(0x6956CB5F)
-I (..\Core\Inc\main.h)(0x6956CB28)
+F (..\User\Src\IT_handlers.c)(0x695810D3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/it_handlers.o -MMD)
+I (..\User\Inc\IT_handlers.h)(0x69580EFF)
+I (..\Core\Inc\main.h)(0x69580627)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
@@ -134,4 +134,25 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h)(0x68F5D6F4)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
 I (..\User\Inc\hw_init.h)(0x6956D49A)
-F (..\User\Inc\IT_handlers.h)(0x6956CB5F)()
+F (..\User\Inc\IT_handlers.h)(0x69580EFF)()
+F (..\User\Src\Connect_logic.c)(0x69580E86)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/Inc -I ../User/Src-I./RTE/_servo-IC:/Users/trety/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -DSTM32F401xC -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="25000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32F401xC-o servo/connect_logic.o -MMD)
+I (..\User\Inc\Connect_logic.h)(0x69580EFF)
+I (..\Core\Inc\main.h)(0x69580627)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h)(0x68F5D6F4)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x68F5D6F4)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h)(0x68F5D6F4)
+I (..\Drivers\CMSIS\Include\core_cm4.h)(0x68F5D6F4)
+I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_tim.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h)(0x68F5D6F4)
+I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h)(0x68F5D6F4)
+I (..\User\Inc\hw_init.h)(0x6956D49A)
+I (..\User\Inc\IT_handlers.h)(0x69580EFF)
+F (..\User\Inc\Connect_logic.h)(0x69580EFF)()
