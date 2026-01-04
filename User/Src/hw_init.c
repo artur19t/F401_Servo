@@ -46,7 +46,7 @@ void PWM3_CH1_UsrInit(void)
   LL_TIM_SetAutoReload(TIM3, 20000-1); //50Hz
   // --- Set PWM mode 1Ch ---
   LL_TIM_OC_SetMode(TIM3, LL_TIM_CHANNEL_CH1, LL_TIM_OCMODE_PWM1);
-  LL_TIM_OC_SetCompareCH1(TIM3, 1500);
+  LL_TIM_OC_SetCompareCH1(TIM3, 2200); //600-2200
   LL_TIM_OC_EnablePreload(TIM3, LL_TIM_CHANNEL_CH1);
   LL_TIM_OC_SetPolarity(TIM3, LL_TIM_CHANNEL_CH1, LL_TIM_OCPOLARITY_HIGH);
   // --- Conect to Pin ---
@@ -102,7 +102,7 @@ void DMA1_UsrInit(void)
   DMA_UsrStrct.MemoryOrM2MDstAddress = (uint32_t)&rx_buf;
   DMA_UsrStrct.MemoryOrM2MDstDataSize = LL_DMA_MDATAALIGN_BYTE;
   DMA_UsrStrct.MemoryOrM2MDstIncMode = LL_DMA_MEMORY_INCREMENT;
-  DMA_UsrStrct.Mode = LL_DMA_MODE_NORMAL;
+  DMA_UsrStrct.Mode = LL_DMA_MODE_CIRCULAR;
   DMA_UsrStrct.NbData = RX_SIZE;
   DMA_UsrStrct.PeriphOrM2MSrcAddress = (uint32_t)&USART2->DR;
   DMA_UsrStrct.PeriphOrM2MSrcDataSize = LL_DMA_PDATAALIGN_BYTE;

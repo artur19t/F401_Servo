@@ -13,12 +13,9 @@ void USART2_logic(uint8_t *buf, uint16_t len)
   uint32_t val = 0;
   uint8_t res = 0;
   res = parse_from_uart(buf, len, &val);
-  if (res == PARSE_OK)
-  {
-    uint32_t timer_val = 1000;
-    timer_val += (uint32_t)(val*5.55);
-    LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
-  }
+  uint32_t timer_val = 600;
+  timer_val += (uint32_t)(val*8.89);
+  LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
 }
 
 enum parse_status_t parse_from_uart(const uint8_t *buf, uint16_t len, uint32_t *value)
