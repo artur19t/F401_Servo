@@ -1,5 +1,7 @@
 #include "Connect_logic.h"
 
+uint8_t len = 0;
+static uint8_t buf_dma[RX_SIZE];
 enum parse_status_t
 {
     PARSE_OK = 0,
@@ -8,16 +10,37 @@ enum parse_status_t
     PARSE_ERR_OVERFLOW
 };
 
-void USART2_logic(uint8_t *buf, uint16_t len)
+void USART2_logic(uint8_t *buf, uint16_t dSize, bool need_s)
 {
   uint32_t val = 0;
   uint8_t res = 0;
-  res = parse_from_uart(buf, len, &val);
-  uint32_t timer_val = 600;
-  timer_val += (uint32_t)(val*8.89);
-  LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
+  DMA_buf(buf, dSize, need_s);
+  if(!need_s)
+  {
+    res = parse_from_uart(buf_dma, len, &val);
+    uint32_t timer_val = 600;
+    timer_val += (uint32_t)(val*8.89);
+    LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
+    len = 0;
+  }
 }
-
+void DMA_buf(uint8_t *bufAddr, uint16_t dSize, bool need_s)
+{
+  for(uint16_t i = 0; i < dSize; i++)
+  {
+    uint8_t c = bufAddr[i];
+    if(c == '\r' || c == '\n')
+    {
+      break;
+    }
+    buf_dma[len] = c;
+    len++;
+  }
+  if (!need_s)
+  {
+    buf_dma[len] = '\0';
+  }
+}
 enum parse_status_t parse_from_uart(const uint8_t *buf, uint16_t len, uint32_t *value)
 {
   uint32_t result = 0;
