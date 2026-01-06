@@ -88,13 +88,16 @@ void DMA1_UsrInit(void)
   DMA_UsrStrct.Channel = LL_DMA_CHANNEL_4;
   DMA_UsrStrct.Direction = LL_DMA_DIRECTION_MEMORY_TO_PERIPH;
   DMA_UsrStrct.MemoryOrM2MDstDataSize = LL_DMA_MDATAALIGN_BYTE;
-  DMA_UsrStrct.MemoryOrM2MDstIncMode = LL_DMA_MEMORY_NOINCREMENT;
+  DMA_UsrStrct.MemoryOrM2MDstIncMode = LL_DMA_MEMORY_INCREMENT;
   DMA_UsrStrct.Mode = LL_DMA_MODE_NORMAL;
   DMA_UsrStrct.PeriphOrM2MSrcAddress = (uint32_t)&USART2->DR;
   DMA_UsrStrct.PeriphOrM2MSrcDataSize = LL_DMA_PDATAALIGN_BYTE;
   DMA_UsrStrct.PeriphOrM2MSrcIncMode = LL_DMA_PERIPH_NOINCREMENT;
   DMA_UsrStrct.Priority = LL_DMA_PRIORITY_LOW;
   LL_DMA_Init(DMA1, LL_DMA_STREAM_6, &DMA_UsrStrct);
+  
+  LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_6);
+  NVIC_EnableIRQ(DMA1_Stream6_IRQn);
   // --- USART2 RX CH4 Stream5 ---
   memset(&DMA_UsrStrct, 0, sizeof(LL_DMA_InitTypeDef));
   DMA_UsrStrct.Channel = LL_DMA_CHANNEL_4;

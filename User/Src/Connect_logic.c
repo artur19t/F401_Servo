@@ -14,13 +14,46 @@ void USART2_logic(uint8_t *buf, uint16_t dSize, bool need_s)
 {
   uint32_t val = 0;
   uint8_t res = 0;
+  uint32_t timer_val = 0;
   DMA_buf(buf, dSize, need_s);
   if(!need_s)
   {
     res = parse_from_uart(buf_dma, len, &val);
-    uint32_t timer_val = 600;
-    timer_val += (uint32_t)(val*8.89);
-    LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
+    switch (res)
+    {
+      case PARSE_OK:
+        if (val < 0)
+        {
+          val = 0;
+        }else if (val > 180)
+        {
+          val = 180;
+        }
+        timer_val = 600;
+        timer_val += (uint32_t)(val*8.89);
+        LL_TIM_OC_SetCompareCH1(TIM3, timer_val);
+        break;
+      case PARSE_ERR_EMPTY:
+      {
+        char err_str[] = "Error: Accepted empty value\r\n";
+        send_string_usart2(err_str);
+        break;
+      }
+      case PARSE_ERR_NOT_DIGIT:
+      {
+        char err_str[] = "Error: Accepted not digit value\r\n";
+        send_string_usart2(err_str);
+        break;
+      }
+      case PARSE_ERR_OVERFLOW:
+      {
+        char err_str[] = "Error: Accepted number which value exceeds uint32_t\r\n";
+        send_string_usart2(err_str);
+        break;
+      }
+      default:
+        break;
+    }
     len = 0;
   }
 }
@@ -66,4 +99,18 @@ enum parse_status_t parse_from_uart(const uint8_t *buf, uint16_t len, uint32_t *
 
   *value = result;
   return PARSE_OK;
+}
+
+void send_string_usart2 (const char *buf)
+{
+  uint16_t len = strlen(buf);
+  
+  LL_DMA_DisableStream(DMA1, LL_DMA_STREAM_6);
+  while (LL_DMA_IsEnabledStream(DMA1, LL_DMA_STREAM_6));
+    
+  LL_DMA_SetMemoryAddress(DMA1, LL_DMA_STREAM_6, (uint32_t)buf);
+  LL_DMA_SetDataLength(DMA1, LL_DMA_STREAM_6, len); 
+  
+  LL_DMA_EnableStream(DMA1, LL_DMA_STREAM_6);
+  LL_USART_EnableDMAReq_TX(USART2);
 }
